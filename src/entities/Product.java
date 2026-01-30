@@ -2,58 +2,27 @@ package entities;
 
 public class Product {
 
-    private int number;
-    private String holder;
-    private double balance;
+    private String name;
+    private Double price;
 
-
-
-    public Product(int number, String holder) {
-        this.number = number;
-        this.holder = holder;
+    public Product(String name, Double price) {
+        this.name = name;
+        this.price = price;
     }
 
-    public int getNumber() {
-        return number;
+    public Double getPrice() {
+        return price;
     }
 
-
-    public String getHolder() {
-        return holder;
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
-    public void setHolder(String holder) {
-        this.holder = holder;
+    public String getName() {
+        return name;
     }
 
-    public double getBalance() {
-        return balance;
+    public void setName(String name) {
+        this.name = name;
     }
-
-    public void initialDeposit(double initial){
-        balance = balance + initial;
-    }
-
-    public void deposit(double deposit){
-        balance += deposit ;
-    }
-
-    public void withdraw(double withdraw){
-        balance -= withdraw + 5.00 ;
-    }
-
-
-    public String toString(){
-        return "Account "
-        + number
-        + ", Holder: "
-        + holder
-        + ", Balance: $"
-        +String.format("%.2f", balance);
-    }
-
-
-
 }
-
-
